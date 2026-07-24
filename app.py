@@ -28,7 +28,7 @@ async def cmd_start(message: types.Message):
 Wybierz interesującą Cię kategorię z menu poniżej, aby złożyć zamówienie i natychmiast otrzymać swój produkt cyfrowy.
 
 W razie pytań użyj komendy /sos, aby skontaktować się z administratorem.''', reply_markup=markup)
-    ''', reply_markup=markup)
+    
 
 
 @dp.message_handler(text=user_message)
