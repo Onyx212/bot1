@@ -73,7 +73,16 @@ async def on_shutdown():
     await dp.storage.wait_closed()
     logging.warning("Bot down")
 
+import os
+from threading import Thread
+from http.server import SimpleHTTPRequestHandler, HTTPServer
 
+def run_dummy_server():
+    port = int(os.environ.get("PORT", 8000))
+    server = HTTPServer(('0.0.0.0', port), SimpleHTTPRequestHandler)
+    server.serve_forever()
+
+Thread(target=run_dummy_server, daemon=True).start()
 if __name__ == '__main__':
 
     if (("HEROKU_APP_NAME" in list(os.environ.keys())) or
