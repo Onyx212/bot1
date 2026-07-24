@@ -23,7 +23,7 @@ async def cmd_start(message: types.Message):
 
     markup.row(user_message, admin_message)
 
-    await message.answer('''await message.answer('''Cześć! 🤖 Witaj w moim sklepie automatycznym. 
+    await message.answer('''Cześć! 🤖 Witaj w moim sklepie automatycznym. 
 
 Wybierz interesującą Cię kategorię z menu poniżej, aby złożyć zamówienie i natychmiast otrzymać swój produkt cyfrowy.
 
